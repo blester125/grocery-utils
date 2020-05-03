@@ -1,0 +1,27 @@
+type_id,type,type_plural
+1,box,boxes
+2,can,cans
+3,2 liter,2 liters
+4,ea,ea
+5,pack,packs
+6,dozen,dozen
+7,loaf,loaves
+8,pound,pounds
+9,bag,bags
+10,bunch,bunches
+11,bowl,bowls
+12,bundle,bundles
+13,jar,jars
+14,oz,ounces
+15,patty,patties
+16,slab,slabs
+17,6 pack,6 packs
+18,tub,tubs
+19,case,cases
+20,gallon,gallons
+21,12 pack,12 packs
+22,can,cans
+23,lg box,lg boxes
+24,lg can,lg cans
+25,tube,tubes
+26,lg jar,lg jars
