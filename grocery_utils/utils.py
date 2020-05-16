@@ -2,6 +2,7 @@ import sqlite3
 from typing import Dict, List
 from itertools import zip_longest
 
+
 def reflow(grouped: Dict[str, List[str]], count: int = 100) -> List[List[str]]:
     columns = []
     column = []
@@ -76,6 +77,7 @@ def update_location_name(conn, old_name, new_name):
 def delete_location(conn, location):
     # Something weird is happening here because this is updating the prios correctly but the unique constraint is failing.
     from tabulate import tabulate
+
     with conn:
         c = conn.cursor()
         prio = c.execute("SELECT priority FROM locations WHERE loc = ?", (location,)).fetchone()[0]
@@ -148,7 +150,7 @@ def _insert_item(conn, name, quantity, type_id, loc_id, get=True):
         c = conn.cursor()
         c.execute(
             "INSERT INTO items(name, quantity, type_id, loc_id, buy) VALUES(?, ?, ?, ?, ?)",
-            (name, quantity, type_id, loc_id, get)
+            (name, quantity, type_id, loc_id, get),
         )
         return c.lastrowid
 

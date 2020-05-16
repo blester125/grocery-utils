@@ -48,7 +48,7 @@ def main():
     grouped = {}
     for (prio, loc), items in groups:
         items = items[["quantity", "type", "name"]]
-        table = tabulate(items, showindex=False, tablefmt='plain')
+        table = tabulate(items, showindex=False, tablefmt="plain")
         grouped[loc] = table.split("\n")
 
     for l in reflow(grouped, args.lines):

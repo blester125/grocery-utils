@@ -1,47 +1,45 @@
 <html>
-    <head>
-        <title>My Grocery List</title>
+  <head>
+    <title>My Grocery List</title>
 
-        <script
-          src="https://code.jquery.com/jquery-1.11.1.min.js"
-          integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
-          crossorigin="anonymous"
-        ></script>
-    </head>
-    <body>
-        <p>
-            <ul>
-                <li><a href="/">Edit My List</a></li>
-                <li><a href="/generate">See My List</a></li>
-                <li><a href="/add-location">Add a new Location</a></li>
-                <li><a href="/add-item">Add a new Item</a></li>
-            </ul>
-        </p>
-        <p>
-            <input placeholder="The Amount Type" id="type"></input>
-            <input placeholder="Plural Version" id="plural"></input>
-            <button onclick="save_type()">Submit</button>
-        </p>
+    <script
+      src="https://code.jquery.com/jquery-1.11.1.min.js"
+      integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="/">Edit My List</a></li>
+      <li><a href="/generate">See My List</a></li>
+      <li><a href="/add-location">Add a new Location</a></li>
+      <li><a href="/add-item">Add a new Item</a></li>
+    </ul>
+    <p>
+      <input placeholder="The Amount Type" id="type" />
+      <input placeholder="Plural Version" id="plural" />
+      <button onclick="save_type()">Submit</button>
+    </p>
 
-        <script>
-            function save_type() {
-                var type = $("#type").val();
-                var plural = $("#plural").val()
-                if (type == "" || plural == "") {
-                    alert("Please fill in all fields");
-                    return;
-                }
-                $.ajax({
-                    url: "/type",
-                    dataType: "json",
-                    type: "post",
-                    contentType: "application/json",
-                    data: JSON.stringify({type: type, plural: plural}),
-                    success: function(data, textStatus, jQxhr) {
-                        window.location.replace("/")
-                    }
-                })
-            }
-        </script>
-    </body>
+    <script>
+      function save_type() {
+        var type = $("#type").val();
+        var plural = $("#plural").val();
+        if (type == "" || plural == "") {
+          alert("Please fill in all fields");
+          return;
+        }
+        $.ajax({
+          url: "/type",
+          dataType: "json",
+          type: "post",
+          contentType: "application/json",
+          data: JSON.stringify({ type: type, plural: plural }),
+          success: function (data, textStatus, jQxhr) {
+            window.location.replace("/");
+          },
+        });
+      }
+    </script>
+  </body>
 </html>

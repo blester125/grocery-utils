@@ -1,40 +1,39 @@
 <html>
-    <head>
-        <title>My Grocery List</title>
-        <script
-          src="https://code.jquery.com/jquery-1.11.1.min.js"
-          integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
-          crossorigin="anonymous"
-        ></script>
-    </head>
-    <body>
-        <p><a href="/">Edit My List</a></p>
-        <input id="lines" placeholder="Lines per column" value=100></input>
-        <input type="checkbox", id="show-all">Show All</input>
-        <button onclick="generate_list()">Generate</button>
-        <pre id="grocery">
-        </pre>
+  <head>
+    <title>My Grocery List</title>
+    <script
+      src="https://code.jquery.com/jquery-1.11.1.min.js"
+      integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p><a href="/">Edit My List</a></p>
+    <input id="lines" placeholder="Lines per column" value="100" />
+    <input type="checkbox" , id="show-all" />
+    <label for="show-all">Show All</label>
+    <button onclick="generate_list()">Generate</button>
+    <pre id="grocery"></pre>
 
-        <script>
-            function generate_list() {
-                var lines = $("#lines").val();
-                var show_all = $("#show-all").is(":checked");
-                if (show_all) {
-                    show_all = 1;
-                } else {
-                    show_all = 0;
-                }
-                console.log(lines);
-                console.log(show_all);
-                $.get(
-                    "/list?lines=" + lines + "&show_all=" + show_all,
-                    success=function(resp) {
-                        console.log(resp);
-                        $("#grocery").text(resp);
-                    }
-                )
-            }
-        </script>
-
-    </body>
+    <script>
+      function generate_list() {
+        var lines = $("#lines").val();
+        var show_all = $("#show-all").is(":checked");
+        if (show_all) {
+          show_all = 1;
+        } else {
+          show_all = 0;
+        }
+        console.log(lines);
+        console.log(show_all);
+        $.get(
+          "/list?lines=" + lines + "&show_all=" + show_all,
+          (success = function (resp) {
+            console.log(resp);
+            $("#grocery").text(resp);
+          })
+        );
+      }
+    </script>
+  </body>
 </html>

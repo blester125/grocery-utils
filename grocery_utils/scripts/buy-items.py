@@ -12,10 +12,7 @@ def main():
     conn = sqlite3.connect(args.db)
 
     for item in get_all(conn):
-        buy = yes_no_dialog(
-            title="Are u gonna buy it? 🎶",
-            text=f"{item[1]} {item[2]} of {item[3]}?"
-        ).run()
+        buy = yes_no_dialog(title="Are u gonna buy it? 🎶", text=f"{item[1]} {item[2]} of {item[3]}?").run()
         if buy:
             buy_item(conn, item[0])
         else:
