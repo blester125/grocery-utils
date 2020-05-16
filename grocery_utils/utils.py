@@ -106,7 +106,14 @@ def get_location_id(conn, location):
 def get_type_id(conn, name):
     with conn:
         c = conn.cursor()
-        c.execute("SELECT type_id FROM types WHERE type = ?;", (name,))
+        c.execute("select type_id from types where type = ?;", (name,))
+        return c.fetchall()[0][0]
+
+
+def get_type_id_by_plural(conn, name):
+    with conn:
+        c = conn.cursor()
+        c.execute("select type_id from types where type_plural = ?;", (name,))
         return c.fetchall()[0][0]
 
 

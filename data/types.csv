@@ -25,3 +25,5 @@ type_id,type,type_plural
 25,tube,tubes
 26,"lg jar","lg jars"
 27,canister,canisters
+28,link,links
+29,bottle,bottles

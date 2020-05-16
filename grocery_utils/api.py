@@ -13,6 +13,7 @@ from grocery_utils.utils import (
     reflow,
     get_types,
     get_type_id,
+    get_type_id_by_plural,
     get_location_id,
     _insert_item,
     insert_type,
@@ -108,7 +109,10 @@ def _add_item():
     quant = request.json["quantity"]
     type_name = request.json["type"]
     loc = request.json["location"]
-    type_id = get_type_id(get_db(), type_name)
+    try:
+        type_id = get_type_id(get_db(), type_name)
+    except:
+        type_id = get_type_id_by_plural(get_db(), type_name)
     loc_id = get_location_id(get_db(), loc)
     try:
         item_id = _insert_item(get_db(), name, quant, type_id, loc_id)
