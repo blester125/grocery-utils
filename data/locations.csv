@@ -1,24 +1,24 @@
 loc_id,loc,priority
 0,Unknown,36
-1,"Fruit",1
-2,"Produce",5
+1,Fruit,1
+2,Produce,5
 3,"Salad/Soup Strips",4
 4,"To-Go (Soup, Sushi, etc)",3
 5,"Pita and Hummus",2
-6,"Charcuterie",35
-7,"Deli",34
-8,"Bakery",6
+6,Charcuterie,35
+7,Deli,34
+8,Bakery,6
 9,"Bagged Bread",7
-10,"Meat",12
+10,Meat,12
 11,"Frozen Seafood",13
 12,"Cold Cuts",14
 13,"Bag Cheese",15
-14,"Yogurt",16
+14,Yogurt,16
 15,"English Muffins and Bagels",17
-16,"Eggs",18
+16,Eggs,18
 17,"Dairy and Butter",19
-18,"Pillsbury",20
-19,"Juice",21
+18,Pillsbury,20
+19,Juice,21
 20,"Paper Products and Cleaning",22
 21,"Baking, Spices, and Gelatin",23
 22,"Foreign Food and Tortilla",26
@@ -26,13 +26,13 @@ loc_id,loc,priority
 24,"Canned Fruit and Vegetables, Hamburger Helper",24
 25,"Salty Snacks and Cookies",29
 26,"Drinks, Soft and Mixed",30
-27,"Alcohol",31
-28,"Coffee",32
-29,"Frozen",11
+27,Alcohol,31
+28,Coffee,32
+29,Frozen,11
 30,"Frozen Meals",10
 31,"Frozen Meats",9
 32,"Frozen Dessert",8
-33,"Toiletries",0
+33,Toiletries,0
 34,Checkout,33
-35,Canned Soup,27
+35,"Canned Soup",27
 36,"Peanut Butter, Jelly, Applesauce",25

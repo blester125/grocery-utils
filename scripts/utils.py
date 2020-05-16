@@ -77,11 +77,19 @@ def get_location_id(conn, location):
         return c.fetchall()[0][0]
 
 
-def get_type_id(conn, name, plural):
+def get_type_id(conn, name):
     with conn:
         c = conn.cursor()
-        c.execute("SELECT type_id FROM types WHERE type = ? AND type_plural = ?", (name, plural))
+        c.execute("SELECT type_id FROM types WHERE type = ?;", (name,))
         return c.fetchall()[0][0]
+
+
+def check_type(conn, type_name):
+    with conn:
+        c = conn.cursor()
+        c.execute("SELECT COUNT(*) FROM types WHERE type = ?;", (type_name,))
+        types = c.fetchall()
+        return True if types else False
 
 
 def insert_item(conn, name, quantity, type_name, type_plural, location):
@@ -92,14 +100,26 @@ def insert_item(conn, name, quantity, type_name, type_plural, location):
     try:
         type_id = insert_type(conn, type_name, type_plural)
     except sqlite3.IntegrityError:
-        type_id = get_type_id(conn, type_name, type_plural)
+        type_id = get_type_id(conn, type_name)
+    _insert_item(conn, name, quantity, type_id, loc_id, True)
+
+
+def _insert_item(conn, name, quantity, type_id, loc_id, get=True):
     with conn:
         c = conn.cursor()
         c.execute(
             "INSERT INTO items(name, quantity, type_id, loc_id, get) VALUES(?, ?, ?, ?, ?)",
-            (name, quantity, type_id, loc_id, True)
+            (name, quantity, type_id, loc_id, get)
         )
         return c.lastrowid
+
+
+def insert_item_with_type(conn, name, quantity, type_id, location):
+    try:
+        loc_id = insert_location(conn, location, "")
+    except sqlite3.IntegrityError:
+        loc_id = get_location_id(conn, location)
+    _insert_item(conn, name, quantity, type_id, loc_id, get=True)
 
 
 def delete_type(conn, type_name):
