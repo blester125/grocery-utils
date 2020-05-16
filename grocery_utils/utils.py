@@ -1,4 +1,28 @@
 import sqlite3
+from typing import Dict, List
+from itertools import zip_longest
+
+def reflow(grouped: Dict[str, List[str]], count: int = 100) -> List[List[str]]:
+    columns = []
+    column = []
+    for loc, group in grouped.items():
+        if len(column) + 1 + len(group) > count:
+            columns.append(column)
+            column = []
+        column.append(f"{loc}:")
+        column.extend(group)
+        column.append("")
+    if column:
+        columns.append(column)
+
+    max_per_column = [len(max(col, key=lambda x: len(x))) for col in columns]
+    lines = []
+    for col in zip_longest(*columns, fillvalue=""):
+        line = []
+        for c, width in zip(col, max_per_column):
+            line.append(c.ljust(width))
+        lines.append("   ".join(line))
+    return lines
 
 
 def insert_location(conn, location, priority):
@@ -104,11 +128,26 @@ def insert_item(conn, name, quantity, type_name, type_plural, location):
     _insert_item(conn, name, quantity, type_id, loc_id, True)
 
 
+def skip_item(conn, item_id):
+    return set_item_status(conn, item_id, get=False)
+
+
+def buy_item(conn, item_id):
+    return set_item_status(conn, item_id, get=True)
+
+
+def set_item_status(conn, item_id, get=True):
+    with conn:
+        c = conn.cursor()
+        c.execute("UPDATE items SET buy = ? WHERE item_id = ?;", (get, item_id,))
+        return c.lastrowid
+
+
 def _insert_item(conn, name, quantity, type_id, loc_id, get=True):
     with conn:
         c = conn.cursor()
         c.execute(
-            "INSERT INTO items(name, quantity, type_id, loc_id, get) VALUES(?, ?, ?, ?, ?)",
+            "INSERT INTO items(name, quantity, type_id, loc_id, buy) VALUES(?, ?, ?, ?, ?)",
             (name, quantity, type_id, loc_id, get)
         )
         return c.lastrowid
@@ -139,7 +178,14 @@ def get_locations(conn):
 def get_types(conn):
     with conn:
         c = conn.cursor()
-        c.execute("SELECT type FROM types;")
+        c.execute("SELECT type FROM types ORDER BY type;")
+        return [t[0] for t in c.fetchall()]
+
+
+def get_plural_types(conn):
+    with conn:
+        c = conn.cursor()
+        c.execute("SELECT type_plural FROM types ORDER BY type;")
         return [t[0] for t in c.fetchall()]
 
 
@@ -157,20 +203,17 @@ def list_items(conn):
         return [i[0] for i in c.fetchall()]
 
 
-def get_items(c, show_all):
-    if show_all:
-        return get_all(c)
-    return get_todays(c)
-
-
-def get_all(conn):
+def get_items(conn):
     sql = """
-        SELECT quantity,
+        SELECT
+            item_id,
+            quantity,
             CASE WHEN quantity == 1 THEN type
             ELSE type_plural
             END AS type,
             name,
             loc,
+            buy,
             priority
         FROM items
         INNER JOIN locations
@@ -184,21 +227,25 @@ def get_all(conn):
         c.execute(sql)
         return c.fetchall()
 
+
 def get_todays(conn):
     sql = """
-        SELECT quantity,
+        SELECT
+            item_id,
+            quantity,
             CASE WHEN quantity == 1 THEN type
             ELSE type_plural
             END AS type,
             name,
             loc,
+            buy,
             priority
         FROM items
         INNER JOIN locations
             ON items.loc_id == locations.loc_id
         INNER JOIN types
             ON items.type_id == types.type_id
-        WHERE items.get == 1
+        WHERE items.buy == 1
         ORDER BY priority, quantity DESC, name
     """
     with conn:

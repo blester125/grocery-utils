@@ -3,7 +3,7 @@ import sqlite3
 import argparse
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import WordCompleter
-from .utils import get_locations, get_types, list_items, insert_item, check_type, insert_item_with_type, get_type_id
+from ..utils import get_locations, get_types, list_items, insert_item, check_type, insert_item_with_type, get_type_id
 
 
 def main():

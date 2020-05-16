@@ -1,7 +1,7 @@
 import sys
 import sqlite3
 import argparse
-from .utils import get_locations
+from ..utils import get_locations
 
 
 def main():

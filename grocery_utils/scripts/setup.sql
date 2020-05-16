@@ -22,7 +22,7 @@ CREATE TABLE items(
     quantity FLOAT,
     type_id INTEGER,
     loc_id INTEGER,
-    get BOOLEAN,
+    buy BOOLEAN,
     FOREIGN KEY(type_id) REFERENCES types(type_id),
     FOREIGN KEY(loc_id) REFERENCES locations(loc_id)
 );

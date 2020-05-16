@@ -3,7 +3,7 @@ import sqlite3
 import argparse
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import WordCompleter
-from .utils import get_locations, delete_location
+from ..utils import get_types, delete_type
 
 
 def main():
@@ -13,12 +13,12 @@ def main():
 
     conn = sqlite3.connect(args.db)
 
-    locations = get_locations(conn)
+    locations = get_types(conn)
     completer = WordCompleter(locations)
-    loc = prompt("Enter a location to delete: ", completer=completer)
+    t = prompt("Enter a type to delete: ", completer=completer)
     try:
-        loc_id = delete_location(conn, loc)
-        print(f"Deleted location {loc}")
+        type_id = delete_type(conn, t)
+        print(f"Deleted type {t}")
     except sqlite3.IntegrityError as e:
         print(e)
         sys.exit(1)

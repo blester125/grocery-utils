@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>My Grocery List</title>
+
+        <script
+          src="https://code.jquery.com/jquery-1.11.1.min.js"
+          integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/vue@2.6.11"
+          integrity="sha384-OZmxTjkv7EQo5XDMPAmIkkvywVeXw59YyYh6zq8UKfkbor13jS+5p8qMTBSA1q+F"
+          crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <p>
+            <ul>
+                <li><a href="/generate">See My List</a></li>
+                <li><a href="/add-item">Add a New Item</a></li>
+                <li><a href="/add-location">Add a New Location</a></li>
+                <li><a href="/add-type">Add a new Amount Type</a></li>
+            </ul>
+        </p>
+        <div id="grocery-items">
+            <template v-for="item in items">
+                <div :id="item.id" style="display: none;"></div>
+                <p v-html="item.name"></p>
+                <span v-if="item.buy">&#9989</span>
+                <span v-else>&#10006</span>
+                <input v-model="item.quantity"></input>
+                <input v-model="item.type"></input>
+                <button v-on:click="set_item(item.id, 1)">Buy</button>
+                <button v-on:click="set_item(item.id, 0)">Skip</button>
+            </template>
+        </div>
+        <script>
+            var vue = new Vue({
+                el: document.getElementById("grocery-items"),
+                data: {
+                    "items": []
+                }
+            });
+            function show_items() {
+                $.get(
+                    "/items",
+                    success=render_items
+                )
+            }
+
+            function render_items(items) {
+                console.log(items)
+                vue.items = items
+            }
+
+            function set_item(item_id, buy) {
+                $.ajax({
+                    url: "/item/" + item_id + "/buy",
+                    dataType: "json",
+                    type: "post",
+                    contentType: "application/json",
+                    data: JSON.stringify({'buy': buy}),
+                    success: function(data, textStatus, jQxhr ) {
+                        show_items();
+                    }
+                })
+            }
+
+            $(document).ready(function() {
+                show_items();
+            });
+        </script>
+    </body>
+</html>

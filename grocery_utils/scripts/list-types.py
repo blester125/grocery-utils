@@ -1,7 +1,7 @@
 import sys
 import sqlite3
 import argparse
-from .utils import get_types_with_plurals
+from ..utils import get_types_with_plurals
 
 
 def main():

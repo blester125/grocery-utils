@@ -3,7 +3,7 @@ import sqlite3
 import argparse
 from prompt_toolkit import prompt
 from prompt_toolkit.completion import WordCompleter
-from .utils import get_locations, update_location_priority
+from ..utils import get_locations, update_location_name
 
 
 def main():
@@ -15,13 +15,13 @@ def main():
 
     locations = get_locations(conn)
     completer = WordCompleter(locations)
-    loc = prompt("Enter a location to change the priority of: ", completer=completer)
-    prio = prompt("Enter the new priority: ")
+    old_loc = prompt("Enter a location to rename: ", completer=completer)
+    new_loc = prompt("Enter the new name for this location: ")
     try:
-        old_prio, loc_id = update_location_priority(conn, loc, prio)
-        print(f"Updated location {loc} priority from {old_prio} -> {new_prio}")
+        loc_id = update_location_name(conn, old_loc, new_loc)
+        print(f"Updated location {old_loc} to be called {new_loc}")
     except sqlite3.IntegrityError as e:
-        print(e)
+        print(f"Location {new_loc} already exists, can't rename {old_loc}")
         sys.exit(1)
 
 

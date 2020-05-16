@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>My Grocery List</title>
+
+        <script
+          src="https://code.jquery.com/jquery-1.11.1.min.js"
+          integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/vue@2.6.11"
+          integrity="sha384-OZmxTjkv7EQo5XDMPAmIkkvywVeXw59YyYh6zq8UKfkbor13jS+5p8qMTBSA1q+F"
+          crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <p>
+            <ul>
+                <li><a href="/">Edit My List</a></li>
+                <li><a href="/generate">See My List</a></li>
+                <li><a href="/add-location">Add a New Location</a></li>
+                <li><a href="/add-type">Add a new Amount Type</a></li>
+            </ul>
+        </p>
+        <p>
+            <input id="quantity" placeholder="Quantity"></input>
+            <select id="type">
+                <option value="default">Amount Type</option>
+                <option v-for="type in types" :value="type">{{ type }}</option>
+            </select>
+            <input id="name" placeholder="Item Name"></input>
+            found with the
+            <select id="location">
+                <option value="default">Location</option>
+                <option v-for="location in locations" :value="location">{{ location }}</option>
+            </select>
+            <button onclick="save_item()">Submit</button>
+        </p>
+
+        <script>
+            var locs = new Vue({
+                el: document.getElementById("location"),
+                data: {
+                    "locations": []
+                }
+            })
+            var types = new Vue({
+                el: document.getElementById("type"),
+                data: {
+                    "types": []
+                }
+            })
+            $(document).ready(function() {
+                $.get(
+                    "/locations",
+                    success=function(loc_vs) {
+                        locs.locations = loc_vs;
+                    }
+                )
+                $.get(
+                    "/types",
+                    success=function(type_vs) {
+                        types.types = type_vs;
+                    }
+                )
+            });
+
+            $("#quantity").change(function() {
+                if (Number($("#quantity").val()) > 1) {
+                    $.get(
+                        "/types-plural",
+                        success=function(type_vs) {
+                            types.types = type_vs
+                        }
+                    )
+                } else {
+                    $.get(
+                        "/types",
+                        success=function(type_vs) {
+                            types.types = type_vs
+                        }
+                    )
+                }
+            });
+
+            function save_item() {
+                var name = $("#name").val();
+                var quant = $("#quantity").val();
+                var type = $("#type").val();
+                var loc = $("#location").val()
+                if (name == "" || quant == "" || type == "default" || loc == "default") {
+                    alert("Please fill in all fields");
+                    return;
+                }
+                $.ajax({
+                    url: "/item",
+                    dataType: "json",
+                    type: "post",
+                    contentType: "application/json",
+                    data: JSON.stringify({name: name, quantity: quant, type: type, location: loc}),
+                    success: function(data, textStatus, jQxhr) {
+                        window.location.replace("/")
+                    }
+                })
+            }
+        </script>
+    </body>
+</html>
