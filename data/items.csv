@@ -1,146 +1,146 @@
-item_id,name,quantity,type_id,loc_id,get
-0,Raspberries,2.0,5,1,False
-1,Strawberries,3.0,5,1,False
-2,"Red Grapes",3.0,9,1,False
-3,"Green Grapes",1.0,9,1,False
-4,Bananas,2.0,10,1,False
-5,Oranges,5.0,4,1,False
-6,Lime,1.0,4,1,False
-7,"Grape Tomato",3.0,5,2,False
-8,"Large Carrot",6.0,4,2,False
-9,"Baby Carrot",1.0,9,2,False
-10,"Pre-made Caesar Salad",3.0,11,2,False
-11,"Pre-made Santa Fe Salad",2.0,11,2,False
-12,"Pre-made Asian Salad",1.0,11,2,False
-13,Zucchini,2.0,4,2,False
-14,"Garlic Bulb",1.0,4,2,False
-15,"Green Bell Pepper",3.0,4,2,False
-16,"Red Bell Pepper",1.0,4,2,False
-17,"Yellow Bell Pepper",1.0,4,2,False
-18,"Yellow Squash",1.0,4,2,False
-19,"Pablano Pepper",1.0,4,2,False
-20,"Mini Bella Mushroom",3.0,5,2,False
-21,"Green Beans",1.0,9,2,False
-22,"Green Onion",1.0,12,2,False
-23,"Broccoli Crown",1.0,4,2,False
-24,"Cauliflower Head",1.0,4,2,False
-25,"Red Potatoes",1.0,9,2,False
-26,"Russet Potato",4.0,4,2,False
-27,"Vadalia Onion",3.0,4,2,False
-28,Celery,1.0,9,2,False
-29,"Dill Pickles",1.0,13,2,False
-30,"Red Onion",1.0,4,2,False
-31,Spinach,1.0,10,2,False
-32,Escarloe,1.0,10,2,False
-33,"Endive Lettuce (chicory)",1.0,10,2,False
-34,"Tortilla Strips (Non-flavored)",1.0,9,3,False
-35,"Wanton Strips",1.0,9,3,False
-36,"Paneara Bead Chicken Tortilla Soup",3.0,11,4,False
-37,"Sabra Classic Hummus Singles",2.0,2,5,False
-38,"Mini Pita Bread",2.0,9,5,False
-39,"Russo Bakery Rye Bread",1.0,7,8,False
-40,"Little Debbie Powdered Mini Doughnuts",1.0,9,9,False
-41,"Italian Bread",1.0,7,8,False
-42,"Hamburger Buns",1.0,5,9,False
-43,"Split Top Hotdog buns",1.0,5,9,False
-44,"Honey Ham Lunch Meat",1.0,5,12,False
-45,Bacon,1.0,5,10,False
-46,Hamburger,4.0,15,10,False
-47,"Pork Tenderloin",1.0,8,10,False
-48,"Ground Beef",1.0,8,10,False
-49,Ribs,2.0,16,10,False
-50,"Italian Sausage",1.0,5,10,False
-51,Bratwurst,1.0,5,10,False
-52,"Chicken Breast",6.0,4,10,False
-53,"Frozen Shrimp",1.0,9,11,False
-54,"Frozen Mango Chunks",1.0,9,0,False
-55,"Yasso Bars (Carmel, Cookie Dough)",5.0,1,32,False
-56,"Enlightened Carmel Bars",2.0,1,32,False
-57,Fudgesicles,1.0,1,32,False
-58,"Tyson Frozen Chicken Chunks",1.0,9,31,False
-59,"Tamales (Beef, Chicken, Pork)",1.0,9,30,False
-60,"Coffee Filters",1.0,5,0,False
-61,"Crystal Light Lemonade Mix (Normal, Raspberry, Pink)",6.0,1,26,False
-62,"O'Doul's Amber",1.0,17,27,False
-63,"Frankenmuth Brewery Little Bavaria Pilsener",1.0,17,27,False
-64,"Leinenkugel's Summer Shandy",1.0,19,27,False
-65,"Mango Body Armor Light Drink",1.0,19,26,False
-66,"Diet Snapple Ice Tea Peach",1.0,19,26,False
-67,"Bubble Lime",1.0,21,26,False
-68,"Bubble Black Raspberry",1.0,21,26,False
-69,"Distilled Water",2.0,20,26,False
-70,"Lemon Bar Mix",1.0,1,21,False
-71,"Brownie Mix",1.0,1,21,False
-72,"Corn Bread Mix",1.0,1,21,False
-73,Sugar,1.0,9,21,False
-74,"Brown Sugar",1.0,9,21,False
-75,"Crisco Baking (butter flavor)",1.0,5,21,False
-76,Flour,1.0,9,21,False
-77,Raisin,1.0,22,21,False
-78,"Jello Gelatin Mix",3.0,23,21,False
-79,"Jello Gelatin Mix",2.0,1,21,False
-80,"Quaker Oats",1.0,22,21,False
-81,"Chopped Ginger",1.0,13,21,False
-82,"Parsley Flakes",1.0,13,21,False
-83,"Kind Granola (Blue/Purple)",1.0,9,23,False
-84,"Schuler's Bar Cheese",1.0,18,13,False
-85,"Mexican Cheese",1.0,9,13,False
-86,"100 calorie pack of cookies",1.0,1,0,False
-87,"Red Miso Soup",8.0,9,22,False
-88,"Tasty Bites Sticky Rice",2.0,9,22,False
-89,"Tasty Bites Bombay Potatoes",4.0,9,22,False
-90,"Teriyaki Glaze",1.0,13,22,False
-91,Honeycomb,1.0,4,22,False
-92,"Satay Sauce",1.0,13,22,False
-93,"Small Flour Tortilla",6.0,4,22,False
-94,"Progresso Light Chicken Noodle Soup",5.0,22,35,False
-95,"Oyster Crackers",1.0,9,35,False
-96,"Dinty Moore Beef Stew",2.0,2,35,False
-97,"Hunt's Tomato Sauce",2.0,24,35,False
-98,"Kidney Beans",3.0,2,24,False
-99,"Great Northern Beans",3.0,26,24,False
-100,"Peanut Butter (80-90 Calories per half serving)",1.0,13,37,False
-101,Applesauce,1.0,17,37,False
-102,"Roasted Peanuts",1.0,13,25,False
-103,"Salted Honey Coated Planters Peanuts",1.0,13,25,False
-104,"Oreos (Mega Stuffed)",1.0,1,25,False
-105,"Cookies (non-oreo)",1.0,1,25,False
-106,Eggs,1.0,6,16,False
-107,"Bays English Muffins",1.0,5,15,False
-108,Napkins,1.0,1,20,False
-109,"Tin Foil",1.0,1,20,False
-110,Draino,1.0,4,20,False
-111,Bleach,1.0,4,20,False
-112,"Paper Towels",1.0,5,20,False
-113,"Clorox Oxy Clean Boosters",1.0,9,20,False
-114,"Brillo Pads",1.0,5,20,False
-115,"Cascade Dishwasher Pods",1.0,1,20,False
-116,Kleenex,4.0,1,20,False
-117,"Lysol Wipes",1.0,22,20,False
-118,"Toilet Paper",1.0,5,20,False
-119,"Floss Picks",2.0,5,33,False
-120,Coke,2.0,3,26,False
-121,"Cinnamon Rolls",1.0,25,18,False
-122,"Orange Juice",0.5,20,19,False
-123,"Chocolate Milk",0.5,20,17,False
-124,"Country Crock Margarine",1.0,18,17,False
-125,"Soda Stream Gas",2.0,27,0,False
-126,"Chobani Fat Free Plain",4.0,5,14,False
-127,"Dannon Greek Yoghurt Vanilla",2.0,5,14,False
-128,"Dannon Greek Yoghurt Coconut",2.0,5,14,False
-129,"Diet Tapioca Pudding",2.0,5,14,False
-130,Popcorn,1.0,17,25,False
-131,"Sugar Snap Peas",2.0,9,2,False
-132,"Rubber Gloves",2.0,5,0,False
-133,"Orange Tic Tack",1.0,1,35,False
-134,"Canola Oil",1.0,13,21,False
-135,"Birdseye Riced Cauliflower",2.0,9,29,False
-136,"Tasty Bites Indian Tiki Marsala Veggies",4.0,9,22,False
-137,"Tasty Bites Indian Lentils",4.0,9,22,False
-138,"Tasty Bites Tandoori Rice",2.0,9,22,False
-139,"Tasty Bites Basmati Rice",2.0,9,22,False
-141,"Green Curry",1.0,13,22,False
-142,"Waterloo Black Cherry",2.0,21,26,False
-143,"Waterloo Lime",2.0,21,26,False
-144,"Pecan Chocolate Turtles",1.0,1,25,1
-145,"Wheat Thins (Reduced Fat)",1.0,1,25,1
+item_id,name,quantity,type_id,loc_id,buy
+0,Raspberries,2.0,5,1,0
+1,Strawberries,3.0,5,1,0
+2,"Red Grapes",3.0,9,1,0
+3,"Green Grapes",1.0,9,1,0
+4,Bananas,2.0,10,1,0
+5,Oranges,5.0,4,1,0
+6,Lime,1.0,4,1,0
+7,"Grape Tomato",3.0,5,2,0
+8,"Large Carrot",6.0,4,2,0
+9,"Baby Carrot",1.0,9,2,0
+10,"Pre-made Caesar Salad",3.0,11,2,0
+11,"Pre-made Santa Fe Salad",2.0,11,2,0
+12,"Pre-made Asian Salad",1.0,11,2,0
+13,Zucchini,2.0,4,2,0
+14,"Garlic Bulb",1.0,4,2,0
+15,"Green Bell Pepper",3.0,4,2,0
+16,"Red Bell Pepper",1.0,4,2,0
+17,"Yellow Bell Pepper",1.0,4,2,0
+18,"Yellow Squash",1.0,4,2,0
+19,"Pablano Pepper",1.0,4,2,0
+20,"Mini Bella Mushroom",3.0,5,2,0
+21,"Green Beans",1.0,9,2,0
+22,"Green Onion",1.0,12,2,0
+23,"Broccoli Crown",1.0,4,2,0
+24,"Cauliflower Head",1.0,4,2,0
+25,"Red Potatoes",1.0,9,2,0
+26,"Russet Potato",4.0,4,2,0
+27,"Vadalia Onion",3.0,4,2,0
+28,Celery,1.0,9,2,0
+29,"Dill Pickles",1.0,13,2,0
+30,"Red Onion",1.0,4,2,0
+31,Spinach,1.0,10,2,0
+32,Escarloe,1.0,10,2,0
+33,"Endive Lettuce (chicory)",1.0,10,2,0
+34,"Tortilla Strips (Non-flavored)",1.0,9,3,0
+35,"Wanton Strips",1.0,9,3,0
+36,"Paneara Bead Chicken Tortilla Soup",3.0,11,4,0
+37,"Sabra Classic Hummus Singles",2.0,2,5,0
+38,"Mini Pita Bread",2.0,9,5,0
+39,"Russo Bakery Rye Bread",1.0,7,8,0
+40,"Little Debbie Powdered Mini Doughnuts",1.0,9,9,0
+41,"Italian Bread",1.0,7,8,0
+42,"Hamburger Buns",1.0,5,9,0
+43,"Split Top Hotdog buns",1.0,5,9,0
+44,"Honey Ham Lunch Meat",1.0,5,12,0
+45,Bacon,1.0,5,10,0
+46,Hamburger,4.0,15,10,0
+47,"Pork Tenderloin",1.0,8,10,0
+48,"Ground Beef",1.0,8,10,0
+49,Ribs,2.0,16,10,0
+50,"Italian Sausage",1.0,5,10,0
+51,Bratwurst,1.0,5,10,0
+52,"Chicken Breast",6.0,4,10,0
+53,"Frozen Shrimp",1.0,9,11,0
+54,"Frozen Mango Chunks",1.0,9,0,0
+55,"Yasso Bars (Carmel, Cookie Dough)",5.0,1,32,0
+56,"Enlightened Carmel Bars",2.0,1,32,0
+57,Fudgesicles,1.0,1,32,0
+58,"Tyson Frozen Chicken Chunks",1.0,9,31,0
+59,"Tamales (Beef, Chicken, Pork)",1.0,9,30,0
+60,"Coffee Filters",1.0,5,0,0
+61,"Crystal Light Lemonade Mix (Normal, Raspberry, Pink)",6.0,1,26,0
+62,"O'Doul's Amber",1.0,17,27,0
+63,"Frankenmuth Brewery Little Bavaria Pilsener",1.0,17,27,0
+64,"Leinenkugel's Summer Shandy",1.0,19,27,0
+65,"Mango Body Armor Light Drink",1.0,19,26,0
+66,"Diet Snapple Ice Tea Peach",1.0,19,26,0
+67,"Bubble Lime",1.0,21,26,0
+68,"Bubble Black Raspberry",1.0,21,26,0
+69,"Distilled Water",2.0,20,26,0
+70,"Lemon Bar Mix",1.0,1,21,0
+71,"Brownie Mix",1.0,1,21,0
+72,"Corn Bread Mix",1.0,1,21,0
+73,Sugar,1.0,9,21,0
+74,"Brown Sugar",1.0,9,21,0
+75,"Crisco Baking (butter flavor)",1.0,5,21,0
+76,Flour,1.0,9,21,0
+77,Raisin,1.0,22,21,0
+78,"Jello Gelatin Mix",3.0,23,21,0
+79,"Jello Gelatin Mix",2.0,1,21,0
+80,"Quaker Oats",1.0,22,21,0
+81,"Chopped Ginger",1.0,13,21,0
+82,"Parsley Flakes",1.0,13,21,0
+83,"Kind Granola (Blue/Purple)",1.0,9,23,0
+84,"Schuler's Bar Cheese",1.0,18,13,0
+85,"Mexican Cheese",1.0,9,13,0
+86,"100 calorie pack of cookies",1.0,1,0,0
+87,"Red Miso Soup",8.0,9,22,0
+88,"Tasty Bites Sticky Rice",2.0,9,22,0
+89,"Tasty Bites Bombay Potatoes",4.0,9,22,0
+90,"Teriyaki Glaze",1.0,13,22,0
+91,Honeycomb,1.0,4,22,0
+92,"Satay Sauce",1.0,13,22,0
+93,"Small Flour Tortilla",6.0,4,22,0
+94,"Progresso Light Chicken Noodle Soup",5.0,22,35,0
+95,"Oyster Crackers",1.0,9,35,0
+96,"Dinty Moore Beef Stew",2.0,2,35,0
+97,"Hunt's Tomato Sauce",2.0,24,35,0
+98,"Kidney Beans",3.0,2,24,0
+99,"Great Northern Beans",3.0,26,24,0
+100,"Peanut Butter (80-90 Calories per half serving)",1.0,13,37,0
+101,Applesauce,1.0,17,37,0
+102,"Roasted Peanuts",1.0,13,25,0
+103,"Salted Honey Coated Planters Peanuts",1.0,13,25,0
+104,"Oreos (Mega Stuffed)",1.0,1,25,0
+105,"Cookies (non-oreo)",1.0,1,25,0
+106,Eggs,1.0,6,16,0
+107,"Bays English Muffins",1.0,5,15,0
+108,Napkins,1.0,1,20,0
+109,"Tin Foil",1.0,1,20,0
+110,Draino,1.0,4,20,0
+111,Bleach,1.0,4,20,0
+112,"Paper Towels",1.0,5,20,0
+113,"Clorox Oxy Clean Boosters",1.0,9,20,0
+114,"Brillo Pads",1.0,5,20,0
+115,"Cascade Dishwasher Pods",1.0,1,20,0
+116,Kleenex,4.0,1,20,0
+117,"Lysol Wipes",1.0,22,20,0
+118,"Toilet Paper",1.0,5,20,0
+119,"Floss Picks",2.0,5,33,0
+120,Coke,2.0,3,26,0
+121,"Cinnamon Rolls",1.0,25,18,0
+122,"Orange Juice",0.5,20,19,0
+123,"Chocolate Milk",0.5,20,17,0
+124,"Country Crock Margarine",1.0,18,17,0
+125,"Soda Stream Gas",2.0,27,0,0
+126,"Chobani Fat Free Plain",4.0,5,14,0
+127,"Dannon Greek Yoghurt Vanilla",2.0,5,14,0
+128,"Dannon Greek Yoghurt Coconut",2.0,5,14,0
+129,"Diet Tapioca Pudding",2.0,5,14,0
+130,Popcorn,1.0,17,25,0
+131,"Sugar Snap Peas",2.0,9,2,0
+132,"Rubber Gloves",2.0,5,0,0
+133,"Orange Tic Tack",1.0,1,35,0
+134,"Canola Oil",1.0,13,21,0
+135,"Birdseye Riced Cauliflower",2.0,9,29,0
+136,"Tasty Bites Indian Tiki Marsala Veggies",4.0,9,22,0
+137,"Tasty Bites Indian Lentils",4.0,9,22,0
+138,"Tasty Bites Tandoori Rice",2.0,9,22,0
+139,"Tasty Bites Basmati Rice",2.0,9,22,0
+141,"Green Curry",1.0,13,22,0
+142,"Waterloo Black Cherry",2.0,21,26,0
+143,"Waterloo Lime",2.0,21,26,0
+144,"Pecan Chocolate Turtles",1.0,1,25,0
+145,"Wheat Thins (Reduced Fat)",1.0,1,25,0
