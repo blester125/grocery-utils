@@ -127,7 +127,7 @@ item_id,name,quantity,type_id,loc_id,get
 122,Orange Juice,0.5,20,19,False
 123,Chocolate Milk,0.5,20,17,False
 124,Country Crock Margarine,1.0,18,17,False
-125,Soda Stream Gas,2.0,18,0,False
+125,Soda Stream Gas,2.0,27,0,False
 126,Chobani Fat Free Plain,4.0,5,14,False
 127,Dannon Greek Yoghurt Vanilla,2.0,5,14,False
 128,Dannon Greek Yoghurt Coconut,2.0,5,14,False

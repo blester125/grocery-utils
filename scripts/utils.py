@@ -1,3 +1,6 @@
+import sqlite3
+
+
 def insert_location(conn, location, priority):
     with conn:
         c = conn.cursor()
@@ -67,6 +70,38 @@ def insert_type(conn, type_name, plural):
         return c.lastrowid
 
 
+def get_location_id(conn, location):
+    with conn:
+        c = conn.cursor()
+        c.execute("SELECT loc_id FROM locations WHERE loc = ?;", (location,))
+        return c.fetchall()[0][0]
+
+
+def get_type_id(conn, name, plural):
+    with conn:
+        c = conn.cursor()
+        c.execute("SELECT type_id FROM types WHERE type = ? AND type_plural = ?", (name, plural))
+        return c.fetchall()[0][0]
+
+
+def insert_item(conn, name, quantity, type_name, type_plural, location):
+    try:
+        loc_id = insert_location(conn, location, "")
+    except sqlite3.IntegrityError:
+        loc_id = get_location_id(conn, location)
+    try:
+        type_id = insert_type(conn, type_name, type_plural)
+    except sqlite3.IntegrityError:
+        type_id = get_type_id(conn, type_name, type_plural)
+    with conn:
+        c = conn.cursor()
+        c.execute(
+            "INSERT INTO items(name, quantity, type_id, loc_id, get) VALUES(?, ?, ?, ?, ?)",
+            (name, quantity, type_id, loc_id, True)
+        )
+        return c.lastrowid
+
+
 def delete_type(conn, type_name):
     with conn:
         c = conn.cursor()
@@ -93,6 +128,13 @@ def get_types_with_plurals(conn):
         c = conn.cursor()
         c.execute("SELECT type, type_plural FROM types;")
         return c.fetchall()
+
+
+def list_items(conn):
+    with conn:
+        c = conn.cursor()
+        c.execute("SELECT name FROM items;")
+        return [i[0] for i in c.fetchall()]
 
 
 def get_items(c, show_all):
