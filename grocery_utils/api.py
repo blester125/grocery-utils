@@ -19,6 +19,7 @@ from grocery_utils.utils import (
     insert_type,
     insert_location,
     get_plural_types,
+    update_item_quantity,
 )
 
 app = Flask(__name__)
@@ -98,7 +99,7 @@ def _buy_item(item_id):
             buy_item(get_db(), item_id)
         else:
             skip_item(get_db(), item_id)
-        return jsonify({"Stats": "Success"})
+        return jsonify({"Status": "Success"})
     except:
         return "Failed", 500
 
@@ -107,8 +108,10 @@ def _buy_item(item_id):
 def _update_item(item_id):
     quant = float(request.json["quantity"])
     try:
-        update_item_quantity(get_db(), item_id, quantity)
-    except:
+        update_item_quantity(get_db(), item_id, quant)
+        return jsonify({"Status": "Success"})
+    except Exception as e:
+        print(e)
         return "Failed", 500
 
 

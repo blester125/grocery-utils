@@ -7,7 +7,7 @@ item_id,name,quantity,type_id,loc_id,buy
 5,Oranges,5.0,4,1,1
 6,Lime,1.0,4,1,0
 7,"Grape Tomato",3.0,5,2,0
-8,"Large Carrot",3.0,4,2,1
+8,"Large Carrot",3.0,4,2,0
 9,"Baby Carrot",1.0,9,2,0
 10,"Pre-made Caesar Salad",3.0,11,2,1
 11,"Pre-made Santa Fe Salad",2.0,11,2,1
@@ -17,13 +17,13 @@ item_id,name,quantity,type_id,loc_id,buy
 15,"Green Bell Pepper",3.0,4,2,1
 16,"Red Bell Pepper",1.0,4,2,0
 17,"Yellow Bell Pepper",1.0,4,2,0
-18,"Yellow Squash",1.0,4,2,1
+18,"Yellow Squash",1.0,4,2,0
 19,"Pablano Pepper",1.0,4,2,0
 20,"Mini Bella Mushroom",1.0,5,2,1
 21,"Green Beans",1.0,9,2,0
 22,"Green Onion",1.0,12,2,0
 23,"Broccoli Crown",1.0,4,2,1
-24,"Cauliflower Head",1.0,4,2,0
+24,"Cauliflower Head",2.0,4,2,1
 25,"Red Potatoes",1.0,9,2,0
 26,"Russet Potato",4.0,4,2,0
 27,"Vadalia Onion",3.0,4,2,0
@@ -36,8 +36,8 @@ item_id,name,quantity,type_id,loc_id,buy
 34,"Tortilla Strips (Non-flavored)",1.0,9,3,1
 35,"Wanton Strips",1.0,9,3,0
 36,"Paneara Bead Chicken Tortilla Soup",3.0,11,4,1
-37,"Sabra Classic Hummus Singles",2.0,2,5,1
-38,"Mini Pita Bread",2.0,9,5,1
+37,"Sabra Classic Hummus Singles",1.0,2,5,1
+38,"Mini Pita Bread",1.0,9,5,1
 39,"Russo Bakery Rye Bread",1.0,7,8,1
 40,"Little Debbie Powdered Mini Doughnuts",1.0,9,9,0
 41,"Italian Bread",1.0,7,8,1
@@ -157,3 +157,6 @@ item_id,name,quantity,type_id,loc_id,buy
 156,"Purple Cow Mint Chocolate Chip",1.0,18,32,1
 157,"Dunkin Donuts French Vanilla Ground",1.0,9,28,1
 158,"Hand Soap",2.0,29,33,1
+159,Tomato,1.0,4,2,1
+160,"Unsalted Butter Sticks",1.0,1,17,1
+161,Blueberries,1.0,5,1,1
