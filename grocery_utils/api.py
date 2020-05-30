@@ -103,6 +103,15 @@ def _buy_item(item_id):
         return "Failed", 500
 
 
+@app.route("/item/<item_id>/update", methods=["POST"])
+def _update_item(item_id):
+    quant = float(request.json["quantity"])
+    try:
+        update_item_quantity(get_db(), item_id, quantity)
+    except:
+        return "Failed", 500
+
+
 @app.route("/item", methods=["POST"])
 def _add_item():
     name = request.json["name"]

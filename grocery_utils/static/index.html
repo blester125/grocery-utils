@@ -22,14 +22,16 @@
     </ul>
     <div id="grocery-items">
       <template v-for="item in items">
-        <div :id="item.id" style="display: none;"></div>
-        <p v-html="item.name"></p>
-        <span v-if="item.buy">&#9989;</span>
-        <span v-else>&#10006;</span>
-        <input v-model="item.quantity" />
-        <input v-model="item.type" />
-        <button v-on:click="set_item(item.id, 1)">Buy</button>
-        <button v-on:click="set_item(item.id, 0)">Skip</button>
+        <div :id="item.id">
+          <p v-html="item.name"></p>
+          <span v-if="item.buy">&#9989;</span>
+          <span v-else>&#10006;</span>
+          <input class="quantity" v-model="item.quantity" />
+          <input readonly class="type" v-model="item.type" />
+          <button v-on:click="set_item(item.id, 1)">Buy</button>
+          <button v-on:click="set_item(item.id, 0)">Skip</button>
+          <button v-on:click="update_item(item.id)">Update</button>
+        </div>
       </template>
     </div>
     <script>
@@ -55,6 +57,25 @@
           type: "post",
           contentType: "application/json",
           data: JSON.stringify({ buy: buy }),
+          success: function (data, textStatus, jQxhr) {
+            show_items();
+          },
+        });
+      }
+
+      function update_item(item_id) {
+        var item = document.getElementById(item_id);
+        console.log(item);
+        var quant = item.getElementsByClassName("quantity")[0];
+        console.log(quant);
+        var amount = quant.value;
+        console.log(amount);
+        $.ajax({
+          url: "/item/" + item_id + "/update",
+          dataType: "json",
+          type: "post",
+          contentType: "application/json",
+          data: JSON.stringify({ quantity: amount }),
           success: function (data, textStatus, jQxhr) {
             show_items();
           },
