@@ -170,3 +170,7 @@ item_id,name,quantity,type_id,loc_id,buy
 169,"Granulated Garlic",1.0,13,21,1
 170,"Sunflower Oil",1.0,29,21,1
 171,"Corn on the Cob",2.0,4,2,1
+172,Oats,1.0,25,21,1
+173,"Shredded Coconut",1.0,4,21,1
+174,Pecans,1.0,9,21,1
+175,"Semi-Sweet Chocolate Chips",1.0,9,21,1
