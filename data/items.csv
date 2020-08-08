@@ -1,20 +1,20 @@
 item_id,name,quantity,type_id,loc_id,buy
-0,Raspberries,4.0,5,1,1
+0,Raspberries,3.0,5,1,1
 1,Strawberries,1.0,5,1,1
 2,"Red Grapes",3.0,9,1,1
 3,"Green Grapes",1.0,9,1,0
-4,Bananas,3.0,10,1,1
-5,Oranges,6.0,4,1,1
+4,Bananas,2.0,10,1,1
+5,Oranges,3.0,4,1,1
 6,Lime,1.0,4,1,0
 7,"Grape Tomato",1.0,5,2,0
 8,"Large Carrot",3.0,4,2,1
 9,"Baby Carrot",1.0,9,2,0
 10,"Pre-made Caesar Salad",2.0,11,2,1
 11,"Pre-made Santa Fe Salad",4.0,11,2,1
-12,"Pre-made Asian Salad",2.0,11,2,1
+12,"Pre-made Asian Salad",1.0,11,2,1
 13,Zucchini,2.0,4,2,0
-14,"Garlic Bulb",2.0,4,2,1
-15,"Green Bell Pepper",3.0,4,2,0
+14,"Garlic Bulb",4.0,4,2,1
+15,"Green Bell Pepper",1.0,4,2,0
 16,"Red Bell Pepper",1.0,4,2,0
 17,"Yellow Bell Pepper",1.0,4,2,0
 18,"Yellow Squash",1.0,4,2,0
@@ -36,36 +36,36 @@ item_id,name,quantity,type_id,loc_id,buy
 34,"Tortilla Strips (Non-flavored)",1.0,9,3,0
 35,"Wanton Strips",1.0,9,3,1
 36,"Paneara Bead Chicken Tortilla Soup",3.0,11,4,1
-37,"Sabra Classic Hummus Singles",1.0,2,5,1
+37,"Sabra Classic Hummus Singles",1.0,2,5,0
 38,"Mini Pita Bread",2.0,9,5,1
 39,"Russo Bakery Rye Bread",1.0,7,8,1
 40,"Little Debbie Powdered Mini Doughnuts",1.0,9,9,0
-41,"Italian Bread",1.0,7,8,1
+41,"Italian Bread",1.0,7,8,0
 42,"Hamburger Buns",1.0,5,9,0
 43,"Split Top Hotdog buns",1.0,5,9,0
 44,"Honey Ham Lunch Meat",1.0,5,12,0
 45,Bacon,1.0,5,10,0
 46,Hamburger,4.0,15,10,0
 47,"Pork Tenderloin",1.5,8,10,0
-48,"Ground Beef",2.0,8,10,1
+48,"Ground Beef",2.0,8,10,0
 49,Ribs,2.0,16,10,0
 50,"Italian Sausage",1.0,5,10,0
 51,Bratwurst,1.0,5,10,0
 52,"Organic Chicken Breast",4.0,4,10,1
 53,"Frozen Shrimp",1.0,9,11,0
-54,"Frozen Mango Chunks",1.0,9,0,1
+54,"Frozen Mango Chunks",2.0,9,0,1
 55,"Yasso Bars (Carmel, Cookie Dough)",9.0,1,32,1
 56,"Enlightened Carmel Bars",3.0,1,32,1
 57,Fudgesicles,2.0,1,32,1
-58,"Tyson Frozen Chicken Chunks",2.0,9,31,0
+58,"Tyson Frozen Chicken Chunks",1.0,9,31,1
 59,"Tamales (Beef, Chicken, Pork)",1.0,9,30,0
 60,"Coffee Filters",1.0,5,0,0
 61,"Crystal Light Lemonade Mix (Normal, Raspberry, Pink)",5.0,1,26,1
 62,"O'Doul's Amber",1.0,17,27,0
 63,"Frankenmuth Brewery Little Bavaria Pilsener",1.0,17,27,0
 64,"Leinenkugel's Summer Shandy",1.0,19,27,0
-65,"Mango Body Armor Light Drink",1.0,19,26,0
-66,"Diet Snapple Ice Tea Peach",2.0,19,26,1
+65,"Mango Body Armor Light Drink",1.0,19,26,1
+66,"Diet Snapple Ice Tea Peach",1.0,19,26,1
 67,"Bubble Lime",1.0,21,26,1
 68,"Bubble Black Raspberry",1.0,21,26,1
 69,"Distilled Water",1.0,20,26,0
@@ -78,11 +78,11 @@ item_id,name,quantity,type_id,loc_id,buy
 76,Flour,1.0,9,21,0
 77,Raisin,1.0,22,21,0
 78,"Jello Gelatin Mix",3.0,23,21,0
-79,"Jello Gelatin Mix",2.0,1,21,0
+79,"Jello Gelatin Mix",1.0,1,21,0
 80,"Quaker Oats",1.0,22,21,0
 81,"Chopped Ginger",1.0,13,21,0
 82,"Parsley Flakes",1.0,13,21,0
-83,"Kind Granola (Blue/Purple)",1.0,9,23,0
+83,"Kind Granola (Blue/Purple)",3.0,9,23,1
 84,"Schuler's Bar Cheese",1.0,18,13,0
 85,"Mexican Cheese",1.0,9,13,0
 86,"100 calorie pack of cookies",1.0,1,0,0
@@ -107,7 +107,7 @@ item_id,name,quantity,type_id,loc_id,buy
 105,"Cookies (non-oreo)",1.0,1,25,0
 106,Eggs,1.0,6,16,1
 107,"Bays English Muffins",1.0,5,15,0
-108,Napkins,1.0,1,20,1
+108,Napkins,1.0,1,20,0
 109,"Tin Foil",1.0,1,20,0
 110,Draino,1.0,4,20,0
 111,Bleach,1.0,4,20,0
@@ -119,18 +119,18 @@ item_id,name,quantity,type_id,loc_id,buy
 117,"Lysol Wipes",1.0,22,20,0
 118,"Toilet Paper",1.0,5,20,1
 119,"Floss Picks",2.0,5,33,0
-120,Coke,2.0,3,26,1
+120,Coke,2.0,3,26,0
 121,"Cinnamon Rolls",1.0,25,18,0
 122,"Orange Juice",0.5,20,19,0
 123,"Chocolate Milk",0.5,20,17,0
-124,"Country Crock Margarine",1.0,18,17,0
+124,"Country Crock Margarine",1.0,18,17,1
 125,"Soda Stream Gas",2.0,27,0,0
-126,"Chobani Fat Free Plain",4.0,5,14,1
+126,"Chobani Fat Free Plain",3.0,5,14,1
 127,"Dannon Greek Yoghurt Vanilla",3.0,5,14,1
 128,"Dannon Greek Yoghurt Coconut",1.0,5,14,1
 129,"Diet Tapioca Pudding",1.0,5,14,1
 130,Popcorn,1.0,17,25,0
-131,"Sugar Snap Peas",1.0,9,2,1
+131,"Sugar Snap Peas",1.0,9,2,0
 132,"Rubber Gloves",2.0,5,0,0
 133,"Orange Tic Tack",1.0,1,34,1
 134,"Canola Oil",1.0,13,21,0
@@ -145,27 +145,27 @@ item_id,name,quantity,type_id,loc_id,buy
 144,"Pecan Chocolate Turtles",1.0,1,25,1
 145,"Wheat Thins (Reduced Fat)",1.0,1,25,0
 146,"Dark Chocolate Covered Almonds",1.0,1,25,0
-147,"Thomas English Muffins",1.0,5,9,0
+147,"Thomas English Muffins",1.0,5,9,1
 148,Kielbasa,4.0,28,10,0
 149,Tuna,2.0,24,24,0
-150,Milk,1.0,20,17,0
+150,Milk,0.25,20,17,1
 151,Febreeze,1.0,29,20,0
 152,"Laundry Detergent",1.0,29,20,0
 153,"Almond Milk",0.5,20,17,0
-154,"Better Made Chips",2.0,9,25,1
+154,"Better Made Chips",2.0,9,25,0
 155,"Purple Cow French Vanilla",1.0,18,32,0
 156,"Purple Cow Mint Chocolate Chip",1.0,18,32,0
 157,"Dunkin Donuts French Vanilla Ground",1.0,9,28,0
-158,"Hand Soap",2.0,29,33,1
+158,"Hand Soap",2.0,29,33,0
 159,Tomato,2.0,4,2,1
 160,"Unsalted Butter Sticks",1.0,1,17,0
 161,Blueberries,1.0,5,1,1
 162,Avacado,1.0,4,2,0
-163,"Olive Oil",1.0,29,21,0
+163,"Olive Oil",2.0,29,21,1
 164,Celery,1.0,9,2,0
 165,Pretzels,1.0,9,25,0
 166,"Romain Lettuce",1.0,4,2,0
-167,"Progresso Soup (chicken noodle)",4.0,2,35,1
+167,"Progresso Soup (chicken noodle)",3.0,2,35,1
 168,Panko,1.0,1,22,0
 169,"Granulated Garlic",1.0,13,21,0
 170,"Sunflower Oil",1.0,29,21,0
@@ -174,39 +174,55 @@ item_id,name,quantity,type_id,loc_id,buy
 173,"Shredded Coconut",1.0,4,21,0
 174,Pecans,1.0,9,21,1
 175,"Semi-Sweet Chocolate Chips",1.0,9,21,1
-176,"McCormik Salt Grinder",1.0,4,21,0
+176,"McCormik Salt Grinder",3.0,4,21,1
 177,"McCormik Pepper Grinder",2.0,4,21,0
 178,Blackberries,1.0,5,1,1
 179,"Wheat Bread",1.0,7,8,0
-180,"Dark Chocolate Covered Cashews",2.0,1,25,1
+180,"Dark Chocolate Covered Cashews",1.0,1,25,1
 181,"Minute Maid Lite",1.0,21,26,1
 182,"Soda Stream Flavor",1.0,4,0,0
-183,Cheerios,1.0,1,23,1
+183,Cheerios,1.0,1,23,0
 184,"Frosted Flakes",1.0,1,23,0
 185,HotDogs,1.0,5,10,0
 186,"Skippy Peanut Butter",1.0,13,36,0
-187,Peaches,3.0,4,1,0
+187,Peaches,3.0,4,1,1
 188,"Campbells Tomato Soup",1.0,2,35,0
 189,"Pretezel Rods",1.0,9,25,0
 190,Peanuts,1.0,5,21,0
 191,Honey,1.0,29,21,0
 192,"Light Corn Syrup",1.0,4,21,0
 193,"Candy Thermometer",1.0,4,0,0
-194,"Bologna (Beef)",1.0,5,12,1
-195,"McCormick Meat Loaf",1.0,5,21,1
-196,"Frozen Mashed Potatoes",1.0,5,30,1
+194,"Bologna (Beef)",1.0,5,12,0
+195,"McCormick Meat Loaf",1.0,5,21,0
+196,"Frozen Mashed Potatoes",1.0,5,30,0
 197,"Cake Mix",1.0,1,21,1
-198,"Fruit Cocktail",2.0,2,24,1
-199,Lemon,4.0,4,1,1
-200,"Wilton Candy Melt",2.0,9,0,1
-201,walnuts,1.0,9,21,1
-202,Pistaschio,1.0,9,21,1
+198,"Fruit Cocktail",2.0,2,24,0
+199,Lemon,3.0,4,1,1
+200,"Wilton Candy Melt",1.0,9,0,1
+201,walnuts,1.0,9,21,0
+202,Pistaschio,1.0,9,21,0
 203,"Cloroxy Whipes",3.0,2,20,1
 204,"Nila Waffers 130 cal",1.0,1,0,1
-205,"Tahini paste",1.0,4,0,1
-206,Chickpeas,3.0,30,0,1
-207,Cumin,1.0,4,21,1
-208,allspice,1.0,4,21,1
-209,"ground coriander",1.0,4,21,1
-210,tumeric,1.0,4,21,1
-211,"cayenne pepper",1.0,4,21,1
+205,"Tahini paste",1.0,4,0,0
+206,Chickpeas,3.0,30,0,0
+207,Cumin,1.0,4,21,0
+208,allspice,1.0,4,21,0
+209,"ground coriander",1.0,4,21,0
+210,tumeric,1.0,4,21,0
+211,"cayenne pepper",1.0,4,21,0
+212,"Peanut Butter",1.0,13,36,0
+213,"Sirlon Steak",2.0,4,10,0
+214,"Pearl Onion",1.0,5,2,0
+215,Cucumber,2.0,4,2,1
+216,"Urine Off",1.0,29,20,0
+217,"Course Sea Salt",1.0,2,21,0
+218,"Active Dry Yeast",1.0,5,21,0
+219,"Rosemary Leaves",1.0,4,21,1
+220,"Wrinkle Release",1.0,29,20,0
+221,Carn-Raspberry,0.5,20,19,0
+222,"Dream Whip topping",1.0,4,0,0
+223,"Vanilla Instant pudding",1.0,1,21,1
+224,"Dark 13x9 pan",1.0,4,0,1
+225,"burger trays",1.0,4,0,1
+226,"trash bags",1.0,1,20,1
+227,"Sandwhich bag",1.0,1,0,1

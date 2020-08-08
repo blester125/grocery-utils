@@ -2,3 +2,4 @@ prompt_toolkit>=2.0.0
 tabulate
 string_distance
 flask
+pandas
