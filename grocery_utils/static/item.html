@@ -19,6 +19,7 @@
       <li><a href="/generate">See My List</a></li>
       <li><a href="/add-location">Add a New Location</a></li>
       <li><a href="/add-type">Add a new Amount Type</a></li>
+      <li><a href="/update-location">Change the location of items</a></li>
     </ul>
     <p>
       <input id="quantity" placeholder="Quantity" />
@@ -30,9 +31,9 @@
       found with the
       <select id="location">
         <option value="default">Location</option>
-        <option v-for="location in locations" :value="location"
-          >{{ location }}</option
-        >
+        <option v-for="location in locations" :value="location">
+          {{ location }}
+        </option>
       </select>
       <button onclick="save_item()">Submit</button>
     </p>

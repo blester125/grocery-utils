@@ -159,6 +159,12 @@ def update_item_quantity(conn, item_id, quantity):
         return c.lastrowid
 
 
+def update_item_location(conn, item_id, loc_id):
+    with conn:
+        c = conn.cursor()
+        c.execute("UPDATE items SET loc_id = ? WHERE item_id = ?;", (loc_id, item_id))
+
+
 def _insert_item(conn, name, quantity, type_id, loc_id, get=True):
     with conn:
         c = conn.cursor()

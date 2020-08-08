@@ -20,6 +20,7 @@ from grocery_utils.utils import (
     insert_location,
     get_plural_types,
     update_item_quantity,
+    update_item_location,
 )
 
 app = Flask(__name__)
@@ -62,6 +63,11 @@ def _add_location_page():
 @app.route("/add-type")
 def _add_type_page():
     return current_app.send_static_file("type.html")
+
+
+@app.route("/update-location")
+def _update_location_page():
+    return current_app.send_static_file("update-location.html")
 
 
 @app.route("/list")
@@ -109,6 +115,18 @@ def _update_item(item_id):
     quant = float(request.json["quantity"])
     try:
         update_item_quantity(get_db(), item_id, quant)
+        return jsonify({"Status": "Success"})
+    except Exception as e:
+        print(e)
+        return "Failed", 500
+
+
+@app.route("/item/<item_id>/location", methods=["POST"])
+def _update_item_loc(item_id):
+    location = request.json["location"]
+    try:
+        loc_id = get_location_id(get_db(), location)
+        update_item_location(get_db(), item_id, loc_id)
         return jsonify({"Status": "Success"})
     except Exception as e:
         print(e)

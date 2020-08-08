@@ -15,23 +15,25 @@
   </head>
   <body>
     <ul>
+      <li><a href="/">Edit My List</a></li>
       <li><a href="/generate">See My List</a></li>
       <li><a href="/add-item">Add a New Item</a></li>
       <li><a href="/add-location">Add a New Location</a></li>
       <li><a href="/add-type">Add a new Amount Type</a></li>
-      <li><a href="/update-location">Change the location of items</a></li>
     </ul>
     <div id="grocery-items">
       <template v-for="item in items">
         <div :id="item.id">
-          <p v-html="item.name"></p>
-          <span v-if="item.buy">&#9989;</span>
-          <span v-else>&#10006;</span>
-          <input class="quantity" v-model="item.quantity" />
-          <input readonly class="type" v-model="item.type" />
-          <button v-on:click="set_item(item.id, 1)">Buy</button>
-          <button v-on:click="set_item(item.id, 0)">Skip</button>
-          <button v-on:click="update_item(item.id)">Update</button>
+          <p>
+            {{ item.name }} is in {{ item.location }}, move to
+            <select class="location">
+              <option value="default">Location</option>
+              <option v-for="location in locations" :value="location">
+                {{ location }}
+              </option>
+            </select>
+            <button v-on:click="update_item(item.id)">Update</button>
+          </p>
         </div>
       </template>
     </div>
@@ -40,6 +42,7 @@
         el: document.getElementById("grocery-items"),
         data: {
           items: [],
+          locations: [],
         },
       });
       function show_items() {
@@ -51,32 +54,19 @@
         vue.items = items;
       }
 
-      function set_item(item_id, buy) {
-        $.ajax({
-          url: "/item/" + item_id + "/buy",
-          dataType: "json",
-          type: "post",
-          contentType: "application/json",
-          data: JSON.stringify({ buy: buy }),
-          success: function (data, textStatus, jQxhr) {
-            show_items();
-          },
-        });
-      }
-
       function update_item(item_id) {
         var item = document.getElementById(item_id);
         console.log(item);
-        var quant = item.getElementsByClassName("quantity")[0];
-        console.log(quant);
-        var amount = quant.value;
-        console.log(amount);
+        var loc = item.getElementsByClassName("location")[0];
+        console.log(loc);
+        var place = loc.value;
+        console.log(place);
         $.ajax({
-          url: "/item/" + item_id + "/update",
+          url: "/item/" + item_id + "/location",
           dataType: "json",
           type: "post",
           contentType: "application/json",
-          data: JSON.stringify({ quantity: amount }),
+          data: JSON.stringify({ location: place }),
           success: function (data, textStatus, jQxhr) {
             show_items();
           },
@@ -84,6 +74,12 @@
       }
 
       $(document).ready(function () {
+        $.get(
+          "/locations",
+          (success = function (loc_vs) {
+            vue.locations = loc_vs;
+          })
+        );
         show_items();
       });
     </script>
