@@ -3,7 +3,7 @@ item_id,name,quantity,type_id,loc_id,buy
 1,Strawberries,1.0,5,1,1
 2,"Red Grapes",3.0,9,1,1
 3,"Green Grapes",1.0,9,1,0
-4,Bananas,2.0,10,1,1
+4,Bananas,3.0,10,1,1
 5,Oranges,3.0,4,1,1
 6,Lime,1.0,4,1,0
 7,"Grape Tomato",1.0,5,2,0
@@ -39,7 +39,7 @@ item_id,name,quantity,type_id,loc_id,buy
 37,"Sabra Classic Hummus Singles",1.0,2,5,0
 38,"Mini Pita Bread",2.0,9,5,1
 39,"Russo Bakery Rye Bread",1.0,7,8,1
-40,"Little Debbie Powdered Mini Doughnuts",1.0,9,9,0
+40,"Little Debbie Powdered Mini Doughnuts",1.0,9,9,1
 41,"Italian Bread",1.0,7,8,0
 42,"Hamburger Buns",1.0,5,9,0
 43,"Split Top Hotdog buns",1.0,5,9,0
@@ -53,13 +53,13 @@ item_id,name,quantity,type_id,loc_id,buy
 51,Bratwurst,1.0,5,10,0
 52,"Organic Chicken Breast",4.0,4,10,1
 53,"Frozen Shrimp",1.0,9,11,0
-54,"Frozen Mango Chunks",2.0,9,0,1
+54,"Frozen Mango Chunks",2.0,9,32,1
 55,"Yasso Bars (Carmel, Cookie Dough)",9.0,1,32,1
 56,"Enlightened Carmel Bars",3.0,1,32,1
 57,Fudgesicles,2.0,1,32,1
 58,"Tyson Frozen Chicken Chunks",1.0,9,31,1
 59,"Tamales (Beef, Chicken, Pork)",1.0,9,30,0
-60,"Coffee Filters",1.0,5,0,0
+60,"Coffee Filters",1.0,5,37,0
 61,"Crystal Light Lemonade Mix (Normal, Raspberry, Pink)",5.0,1,26,1
 62,"O'Doul's Amber",1.0,17,27,0
 63,"Frankenmuth Brewery Little Bavaria Pilsener",1.0,17,27,0
@@ -99,11 +99,11 @@ item_id,name,quantity,type_id,loc_id,buy
 97,"Hunt's Tomato Sauce",2.0,24,35,0
 98,"Kidney Beans",3.0,2,24,0
 99,"Great Northern Beans",3.0,26,24,0
-100,"Peanut Butter (80-90 Calories per half serving)",1.0,13,37,0
-101,Applesauce,1.0,17,37,0
+100,"Peanut Butter (80-90 Calories per half serving)",1.0,13,36,0
+101,Applesauce,1.0,17,36,0
 102,"Roasted Peanuts",1.0,13,25,0
 103,"Salted Honey Coated Planters Peanuts",1.0,13,25,0
-104,"Oreos (Mega Stuffed)",1.0,1,25,0
+104,"Oreos (Mega Stuffed)",1.0,1,25,1
 105,"Cookies (non-oreo)",1.0,1,25,0
 106,Eggs,1.0,6,16,1
 107,"Bays English Muffins",1.0,5,15,0
@@ -120,7 +120,7 @@ item_id,name,quantity,type_id,loc_id,buy
 118,"Toilet Paper",1.0,5,20,1
 119,"Floss Picks",2.0,5,33,0
 120,Coke,2.0,3,26,0
-121,"Cinnamon Rolls",1.0,25,18,0
+121,"Cinnamon Rolls",3.0,25,18,1
 122,"Orange Juice",0.5,20,19,0
 123,"Chocolate Milk",0.5,20,17,0
 124,"Country Crock Margarine",1.0,18,17,1
@@ -180,7 +180,7 @@ item_id,name,quantity,type_id,loc_id,buy
 179,"Wheat Bread",1.0,7,8,0
 180,"Dark Chocolate Covered Cashews",1.0,1,25,1
 181,"Minute Maid Lite",1.0,21,26,1
-182,"Soda Stream Flavor",1.0,4,0,0
+182,"Soda Stream Flavor",1.0,4,37,0
 183,Cheerios,1.0,1,23,0
 184,"Frosted Flakes",1.0,1,23,0
 185,HotDogs,1.0,5,10,0
@@ -191,20 +191,20 @@ item_id,name,quantity,type_id,loc_id,buy
 190,Peanuts,1.0,5,21,0
 191,Honey,1.0,29,21,0
 192,"Light Corn Syrup",1.0,4,21,0
-193,"Candy Thermometer",1.0,4,0,0
+193,"Candy Thermometer",1.0,4,37,0
 194,"Bologna (Beef)",1.0,5,12,0
 195,"McCormick Meat Loaf",1.0,5,21,0
 196,"Frozen Mashed Potatoes",1.0,5,30,0
 197,"Cake Mix",1.0,1,21,1
 198,"Fruit Cocktail",2.0,2,24,0
 199,Lemon,3.0,4,1,1
-200,"Wilton Candy Melt",1.0,9,0,1
+200,"Wilton Candy Melt",1.0,9,37,1
 201,walnuts,1.0,9,21,0
 202,Pistaschio,1.0,9,21,0
 203,"Cloroxy Whipes",3.0,2,20,1
 204,"Nila Waffers 130 cal",1.0,1,0,1
-205,"Tahini paste",1.0,4,0,0
-206,Chickpeas,3.0,30,0,0
+205,"Tahini paste",1.0,4,22,0
+206,Chickpeas,3.0,30,22,0
 207,Cumin,1.0,4,21,0
 208,allspice,1.0,4,21,0
 209,"ground coriander",1.0,4,21,0
@@ -220,9 +220,17 @@ item_id,name,quantity,type_id,loc_id,buy
 219,"Rosemary Leaves",1.0,4,21,1
 220,"Wrinkle Release",1.0,29,20,0
 221,Carn-Raspberry,0.5,20,19,0
-222,"Dream Whip topping",1.0,4,0,0
+222,"Dream Whip topping",1.0,4,21,0
 223,"Vanilla Instant pudding",1.0,1,21,1
-224,"Dark 13x9 pan",1.0,4,0,1
-225,"burger trays",1.0,4,0,1
+224,"Dark 13x9 pan",1.0,4,37,1
+225,"burger trays",1.0,4,37,1
 226,"trash bags",1.0,1,20,1
 227,"Sandwhich bag",1.0,1,0,1
+228,"Crunchy Peanut Butter",1.0,13,36,1
+229,"Hershey Bars",1.0,5,25,1
+230,"Campbell Cream of Mushroom",1.0,2,35,1
+231,"Campbell Chicken Noodel",1.0,2,35,1
+232,Mustard,1.0,29,0,1
+233,"Aunt Millie Italian Bread",1.0,7,9,1
+234,"Graham Cracker",1.0,1,25,1
+235,Platain,1.0,4,2,1
